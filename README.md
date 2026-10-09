@@ -1,28 +1,15 @@
-# Sarthuk Bloodbane — GitHub Pages fan site
+# Sarthuk Bloodbane — GitHub Pages V2
 
-A free, single-page fan shrine for **Sarthuk Bloodbane, of the Warsong Clan**. No frameworks, backend, paid services or build step.
+Upload the **contents of this folder**, including `style.css`, all four `.html` files, and the **assets folder with its two PNG images**, to the root of the existing `Sarthuk-Bloodbane` repository.
 
-## Publishing with GitHub Pages
+## Important: easiest way to update
 
-1. Log in at https://github.com and create a **public** repository (e.g. `sarthuk-bloodbane`).
-2. Upload `index.html`, this `README.md`, and the `assets` folder (including artwork if available) to the **root** of the `main` branch. If using the ZIP, unzip it first and upload its contents, not the ZIP itself.
-3. Open the repository's **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**; choose **main** and **/(root)**; then click **Save**.
-5. Once GitHub finishes publishing, visit `https://YOUR-USERNAME.github.io/sarthuk-bloodbane/`. You may need to refresh after the first deployment.
+1. Download this ZIP and unzip it on your PC.
+2. Open your GitHub repository and use **Add file → Upload files**.
+3. Drag `index.html`, `lore.html`, `gallery.html`, `calendar.html`, `style.css` and `README.md` onto GitHub and commit. This updates `index.html` and creates the other pages.
+4. Open your existing `assets` folder on GitHub. Choose **Add file → Upload files** and upload `sarthuk-flex.png` and `sarthuk-battle.png` from the new ZIP's `assets` folder. Commit.
+5. Wait for the Pages deployment to finish, then reload https://chreadman.github.io/Sarthuk-Bloodbane/ with Ctrl+F5.
 
-## Artwork
+All image references are PNG and case-exact. The site is pure static HTML/CSS and has no build dependencies.
 
-Place these filenames exactly inside `assets/`:
-
-- `sarthuk-hero.webp` — primary hero background/portrait
-- `sarthuk-portrait.webp` — original Sarthuk retail portrait
-- `sarthuk-battle.webp` — Sarthuk battling Illidan at the Black Temple, **with his axe**, with restrained detail/grain
-- `sarthuk-flex.webp` — Sarthuk's flex pose
-
-Any artwork you already have in PNG/JPG can be converted to WebP, or you can change the `.webp` extensions in `index.html` to match your files. Until added, styled backgrounds appear instead of broken images.
-
-## Editing
-
-Everything lives in `index.html`: lore text, captions, layout and colors. Edit directly on GitHub with the pencil icon and commit to publish changes. The calendar is an initial teaser; twelve full entries and a printable calendar can follow.
-
-Fan project; Warcraft and related trademarks are the property of their respective owners. No affiliation with Blizzard Entertainment.
+To add more images later, upload to `assets/` and create a new `<figure>` inside the `full-gallery` element in `gallery.html`.
