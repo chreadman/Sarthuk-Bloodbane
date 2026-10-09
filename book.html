@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#170b08">
+<meta name="description" content="Book Sarthuk Bloodbane, of the Warsong Clan, as your legendary dungeon or raid tank. Maximum threat, minimum modesty.">
+<title>BOOK SARTHUK | The Tank Event of the Century</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Self-contained: this page leaves the shrine's shared CSS untouched. */
+.booking-hero{position:relative;isolation:isolate;min-height:660px;display:flex;align-items:center;padding:80px 0 95px;overflow:hidden;border-bottom:4px solid #aa3922;background:radial-gradient(circle at 70% 30%,#a1391b4f,transparent 40%),linear-gradient(95deg,#0f0909 4%,#160b0ae8 47%,#130b0a66 88%),url('assets/sarthuk-banner.png') 76% center/cover no-repeat,#170e0b}
+.booking-hero::after{content:"";position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(transparent,#0c0a08);pointer-events:none;z-index:-1}
+.booking-hero .wrap{position:relative;z-index:1;width:100%}
+.booking-hero h1{font-size:clamp(3.5rem,7.5vw,7rem);line-height:.96;max-width:930px;letter-spacing:-.04em;margin:26px 0 24px}
+.booking-hero .lead{max-width:680px;font-size:clamp(1.35rem,2.3vw,1.8rem);color:#f9dfb7;text-shadow:0 2px 10px #000}
+.kicker{display:inline-block;color:#fbe3ae;border:1px solid #ac6b42;background:#1d100dc9;padding:9px 15px;font-size:14px;letter-spacing:.22em;font-weight:800;text-transform:uppercase}
+.trailer-line{font:700 18px/1.3 'Barlow Condensed',sans-serif;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin:0 0 12px}
+.big-hype{text-transform:uppercase;letter-spacing:.01em}
+.movie-sub{font-size:clamp(1.6rem,2.9vw,2.35rem);color:#f6dfba;font-weight:800;line-height:1.16;margin-top:23px;text-transform:uppercase}
+.trailer-tag{font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.18em}
+.poster-rating{display:inline-block;border:2px solid #e6c38b;padding:7px 12px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-top:28px;color:#e6c38b}
+.booking-section{padding:84px 0}
+.booking-section + .booking-section{border-top:1px solid #543022}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;margin-top:35px}
+.feature{background:linear-gradient(160deg,#382016,#17100d);padding:27px;border:1px solid #8f5531;min-width:0}
+.feature .no{font:900 3rem Cinzel,serif;color:#d44a2b;line-height:1;margin-bottom:14px}
+.feature h3{color:var(--gold);font-size:1.32rem}
+.feature p{color:#e6cfab;margin:8px 0 0;font-size:1.17rem}
+.trailer-quote{margin:34px 0 0;padding:25px 30px;border-left:5px solid #d34b2e;background:#2b1710;color:#efcd9a;font:italic clamp(1.3rem,2.4vw,1.95rem)/1.35 Cinzel,serif}
+.booking-banner{font-family:Cinzel,serif;font-size:clamp(2rem,4.3vw,4rem);font-weight:900;line-height:1.12;text-align:center;color:#f3e6cb;padding:38px 0}
+.booking-banner span{color:var(--blood)}
+.booking-grid{display:grid;grid-template-columns:1fr 1.55fr;gap:36px;align-items:start}
+.booking-sidebar{background:linear-gradient(150deg,#311b12,#150d0b);padding:26px;border:1px solid #805134}
+.booking-sidebar h3{color:var(--gold)}
+.booking-sidebar p,.booking-sidebar li{color:#e3c7a3;font-size:1.12rem}
+.booking-sidebar ul{padding-left:23px}
+.booking-sidebar li{margin:8px 0}
+.booking-sidebar .fine{font-size:1rem;color:#c7a580}
+.booking-form{padding:clamp(20px,3vw,34px);border:2px solid #a4713e;background:linear-gradient(135deg,#301a10,#1a110d 65%);box-shadow:0 18px 50px #0008}
+.booking-form h3{color:var(--gold);margin-bottom:3px}
+.booking-form > p{margin-top:0;color:#dbc49e}
+.booking-fields{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.booking-field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.booking-field.full{grid-column:1/-1}
+.booking-field label{color:#f6dcad;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.booking-field input,.booking-field select,.booking-field textarea,.booking-output textarea{display:block;width:100%;background:#100c0b;color:#fff0d5;border:1px solid #8c5c38;border-radius:0;padding:12px 13px;font:500 18px/1.35 'Barlow Condensed',sans-serif;min-width:0}
+.booking-field input:focus,.booking-field select:focus,.booking-field textarea:focus,.booking-output textarea:focus{outline:2px solid #e2ad63;outline-offset:2px}
+.booking-field textarea{resize:vertical;min-height:96px}
+.booking-field small{color:#bba07f;font-size:14px}
+.booking-submit{cursor:pointer;font-family:inherit;margin-top:24px;padding:16px 24px;background:linear-gradient(135deg,#ba3826,#711e16);color:#fff1d7;text-transform:uppercase;letter-spacing:.13em;font-size:19px;font-weight:800;border:2px solid #f2b96d;box-shadow:5px 6px 0 #090403}
+.booking-submit:hover{background:linear-gradient(135deg,#d84d2b,#97251b)}
+.booking-submit:focus-visible,.copy-booking:focus-visible{outline:3px solid #f5dcad;outline-offset:4px}
+.booking-hint{font-size:14px;color:#c8a980;margin-top:15px;line-height:1.4}
+.booking-output{margin-top:26px;padding:25px;border:1px solid #d6a65b;background:#0f0c0a}
+.booking-output h3{margin:0 0 5px}
+.booking-output[hidden]{display:none}
+.booking-output textarea{resize:vertical;min-height:310px;white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace;font-size:14px;line-height:1.55}
+.copy-booking{cursor:pointer;border:1px solid #f0bc74;background:#632019;padding:12px 22px;color:#ffedcd;font:800 16px 'Barlow Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-top:15px}
+.copy-booking:hover{background:#973020}
+.copy-result{display:inline-block;color:#e1c591;margin-left:12px;min-height:1em}
+.myth-note{text-align:center;color:#ceb28d;font-style:italic;margin-top:24px;font-size:1.2rem}
+.fake-review{max-width:890px;margin:0 auto;padding:35px 35px 30px;text-align:center;background:#22130e;border:1px solid #845033}
+.fake-review q{display:block;font:italic clamp(1.4rem,2.2vw,2rem)/1.4 Cinzel,serif;color:#eac78b}
+.fake-review .attribution{color:#d99755;margin-top:18px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+@media(max-width:900px){.booking-grid{grid-template-columns:1fr}.booking-sidebar{order:1}}
+@media(max-width:760px){.booking-hero{min-height:560px;padding:70px 0;background-position:64% center}.booking-hero h1{font-size:clamp(3.1rem,12vw,5rem)}.booking-hero .lead{font-size:1.25rem}.feature-grid,.booking-fields{grid-template-columns:1fr}.booking-field.full{grid-column:1}.booking-section{padding:54px 0}.booking-banner{padding:20px 0}.booking-form{padding:20px}.booking-hint{max-width:50ch}.copy-result{display:block;margin:10px 0 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="topbar"><nav class="wrap"><a class="mark" href="index.html">⚔ SARTHUK <span>BLOODBANE</span></a><div class="links"><a href="index.html">Home</a><a href="lore.html">The Lore</a><a href="gallery.html">Gallery</a><a href="calendar.html">2027 Calendar</a><a href="book.html" aria-current="page">Book Sarthuk</a></div></nav></header>
+<main>
+<section class="booking-hero">
+<div class="wrap">
+<div class="kicker">This season's most unnecessary cinematic event</div>
+<h1 class="big-hype">ONE TANK.<br><span class="red">INFINITE RAGE.</span></h1>
+<div class="movie-sub">THE DUNGEON ISN'T READY.<br>THE RAID ISN'T READY.<br><span style="color:var(--gold)">BUT HE IS.</span></div>
+<p class="lead">Twenty-two years in the making. Forged in the Warsong Clan. Engineered to absorb punishment, command attention, and become the single most unforgettable voice in your raid channel.</p>
+<div class="actions"><a class="btn" href="#summon">SUMMON THE LEGEND ↓</a><a class="btn outline" href="gallery.html">WITNESS THE EVIDENCE</a></div>
+<div class="poster-rating">Rated R — for Rage, Ridiculousness &amp; Remarkable Deltoids</div>
+</div>
+</section>
+<section class="booking-section"><div class="wrap">
+<p class="trailer-line">In a world where DPS pulls first...</p>
+<h2>ONE ORC <span class="red">STANDS BETWEEN</span><br>YOUR GROUP AND ABSOLUTE DISASTER.</h2>
+<p class="lead">His name is <strong>Sarthuk Bloodbane, of the Warsong Clan.</strong> Warrior. Tank. Frontline philosopher. Self-appointed Sexiest Orc Alive. A chill companion between pulls, an unstoppable iron wall when the boss swings, and occasionally the star of an extremely passionate twelve-minute speech about threat management.</p>
+<div class="feature-grid">
+<article class="feature"><div class="no">01</div><h3>HE BRINGS THE THREAT</h3><p>Bosses hate him. Healers tolerate him. DPS discover, often painfully, that “wait for the tank” was not merely a suggestion.</p></article>
+<article class="feature"><div class="no">02</div><h3>HE BRINGS THE VIBES</h3><p>Good jokes. Chill runs. Questionable impressions. Voice comms ranging from soothing veteran wisdom to glorious, completely unplanned action-movie dialogue.</p></article>
+<article class="feature"><div class="no">03</div><h3>HE BRINGS THE ABS</h3><p>Armor coverage varies. Confidence does not. Threat generation may be affected by enemy distraction. Peer-reviewed by Sarthuk.</p></article>
+</div>
+<blockquote class="trailer-quote">“You wanted a tank. You got a main character.”</blockquote>
+</div></section>
+<section class="booking-section"><div class="wrap"><div class="eyebrow" style="text-align:center">From the producers of “The Murloc Incident”</div><div class="booking-banner">THIS SUMMER...<br><span>DON'T JUST CLEAR THE INSTANCE.</span><br>BECOME PART OF THE LEGEND.</div>
+<div class="fake-review"><q>Five stars. Magnificent pulling. Incredible jawline. Would absolutely book again.</q><div class="attribution">— Sarthuk Bloodbane, verified self-review</div></div>
+</div></section>
+<section id="summon" class="booking-section"><div class="wrap">
+<div class="eyebrow">Your dungeon deserves a headliner</div><h2>REQUEST YOUR <span class="red">TANK.</span></h2>
+<p class="lead">Fill out the casting call. Pick your adventure. Prepare yourself for a glorious amount of tanking and a deeply unreasonable amount of personality.</p>
+<div class="booking-grid">
+<aside class="booking-sidebar"><h3>THE BLOODBANE EXPERIENCE</h3><ul><li>One (1) heavily armed Warsong warrior.</li><li>Massive threat. Even larger personality.</li><li>Veteran tactical guidance, occasionally interrupted by swearing.</li><li>Unexpected references to a calendar nobody requested.</li><li>Zero mercy for bosses. Limited sympathy for DPS who pull early.</li></ul>
+<div class="tag">Important fine print</div><p class="fine">Availability is not guaranteed. Loot is not guaranteed. A good story is highly probable. The existence of this form does not constitute a confirmed booking, divine summons, contractual obligation, or proof that Sarthuk is even online.</p>
+<p class="fine"><strong>Note:</strong> This site is static. Your request is generated locally in your browser and is <em>not</em> automatically transmitted to Sarthuk. Copy it and send it by your usual game chat or Discord channel.</p></aside>
+<form id="bookingForm" class="booking-form"><h3>THE OFFICIAL-ISH BOOKING SCROLL</h3><p>No agents. No management. Just you, the dungeon, and an orc with suspiciously good hair.</p>
+<div class="booking-fields">
+<div class="booking-field"><label for="heroName">YOUR HERO NAME *</label><input id="heroName" name="heroName" type="text" autocomplete="nickname" maxlength="60" placeholder="Who summons the Sexiest Orc Alive?" required></div>
+<div class="booking-field"><label for="realm">REALM OF ADVENTURE *</label><select id="realm" name="realm" required><option value="">Choose your battlefield</option><option>WoW Forever — EU</option><option>WoW Retail — EU</option><option>Other Azeroth timeline</option></select></div>
+<div class="booking-field"><label for="runType">THE MISSION *</label><select id="runType" name="runType" required><option value="">What glorious nonsense?</option><option>Dungeon</option><option>Raid</option><option>World Boss</option><option>Extremely ill-advised expedition</option></select></div>
+<div class="booking-field"><label for="instance">TARGET OF DESTRUCTION *</label><input id="instance" name="instance" type="text" maxlength="100" placeholder="Dungeon, raid, or poor unsuspecting boss" required></div>
+<div class="booking-field"><label for="runDate">WHEN? *</label><input id="runDate" name="runDate" type="date" required></div>
+<div class="booking-field"><label for="runTime">AT WHAT HOUR? (EU SERVER TIME) *</label><input id="runTime" name="runTime" type="time" required></div>
+<div class="booking-field"><label for="crew">YOUR CREW</label><select id="crew" name="crew"><option>5-player squad</option><option>10 brave souls</option><option>20 unfortunate witnesses</option><option>40 absolute lunatics</option><option>Other / TBD</option></select></div>
+<div class="booking-field"><label for="comms">VOICE COMMS</label><select id="comms" name="comms"><option>Discord</option><option>In-game voice</option><option>Text only (tragic)</option><option>Other / TBD</option></select></div>
+<div class="booking-field full"><label for="desiredVibe">DESIRED LEVEL OF CINEMATIC MADNESS</label><select id="desiredVibe" name="desiredVibe"><option>Chill adventure, responsible tanking</option><option>Summer blockbuster, full soundtrack energy</option><option>Maximum Sarthuk. No further questions.</option></select></div>
+<div class="booking-field full"><label for="notes">SPECIAL REQUESTS / INTELLIGENCE</label><textarea id="notes" name="notes" maxlength="800" placeholder="Any boss mechanics, questionable team compositions, or particularly brave DPS we should know about?"></textarea><small>Maximum 800 characters. No personal details needed.</small></div>
+</div>
+<button class="booking-submit" type="submit">⚔ GENERATE MY EPIC BOOKING REQUEST</button>
+<div class="booking-hint">This generates a copyable request only. It does not send anything or reserve Sarthuk's time.</div>
+<div id="bookingOutput" class="booking-output" hidden aria-live="polite"><h3>THE SCROLL HAS BEEN FORGED.</h3><p>Copy the request and send it directly to Sarthuk in your preferred game chat or Discord.</p><label for="requestText" class="trailer-tag">Your transmission</label><textarea id="requestText" readonly rows="13"></textarea><button type="button" class="copy-booking" id="copyBooking">COPY THE WAR SCROLL</button><span id="copyResult" class="copy-result" role="status"></span></div>
+</form>
+</div>
+<p class="myth-note">Some call him a hero. Others call him a liability. Everyone calls him the tank.</p>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><strong>Sarthuk Bloodbane, of the Warsong Clan.</strong><div>Lok'tar ogar. Fan-made, unofficial World of Warcraft character shrine. Not affiliated with Blizzard Entertainment.</div><div class="small">© 2026 — The Sarthuk Appreciation Society · All praise unverified.</div></div></footer>
+<script>
+(()=>{
+'use strict';
+const form=document.getElementById('bookingForm');
+const output=document.getElementById('bookingOutput');
+const requestText=document.getElementById('requestText');
+const copyButton=document.getElementById('copyBooking');
+const status=document.getElementById('copyResult');
+const field=(id)=>document.getElementById(id).value.trim();
+form.addEventListener('submit',(event)=>{
+  event.preventDefault();
+  if(!form.reportValidity())return;
+  const lines=[
+    '⚔ OFFICIAL-ISH SARTHUK BLOODBANE TANK REQUEST ⚔',
+    '',
+    'TO: Sarthuk Bloodbane, of the Warsong Clan',
+    'FROM: '+field('heroName'),
+    'TIMELINE: '+field('realm'),
+    'MISSION: '+field('runType'),
+    'TARGET: '+field('instance'),
+    'DATE: '+field('runDate'),
+    'TIME: '+field('runTime')+' (EU server time)',
+    'CREW: '+field('crew'),
+    'VOICE COMMS: '+field('comms'),
+    'CINEMATIC EXPECTATIONS: '+field('desiredVibe'),
+    'SPECIAL INTELLIGENCE: '+(field('notes')||'None. We enter blind, like legends.'),
+    '',
+    'We hereby request one (1) tank, several (hundred) glorious moments,',
+    'and a heroic amount of yelling at anyone who pulls before the warrior.',
+    '',
+    'LOK\'TAR OGAR!',
+    '',
+    '[Request only — booking not confirmed.]'
+  ];
+  requestText.value=lines.join('\n');
+  output.hidden=false;
+  status.textContent='';
+  output.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+});
+copyButton.addEventListener('click',async()=>{
+  if(!requestText.value)return;
+  try{
+    if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(requestText.value);}
+    else{requestText.focus();requestText.select();if(!document.execCommand('copy'))throw new Error('Copy failed');}
+    status.textContent='Copied! Now send it to Sarthuk.';
+  }catch(e){requestText.focus();requestText.select();status.textContent='Select and copy the text above (Ctrl+C).';}
+});
+})();
+</script>
+</body>
+</html>
